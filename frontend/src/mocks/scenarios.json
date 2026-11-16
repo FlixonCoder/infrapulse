@@ -1,0 +1,23 @@
+[
+  {
+    "id": "substation-outage",
+    "name": "Marathahalli substation outage",
+    "description": "A single power failure. A citywide chain reaction.",
+    "trigger_node_ids": ["sub1"],
+    "horizon_minutes": 360
+  },
+  {
+    "id": "water-disruption",
+    "name": "Munnekolala water disruption",
+    "description": "Explore hospital water reserves after a pump failure.",
+    "trigger_node_ids": ["pump1"],
+    "horizon_minutes": 360
+  },
+  {
+    "id": "dual-outage",
+    "name": "Dual substation outage",
+    "description": "Test what happens when redundant power feeds fail together.",
+    "trigger_node_ids": ["sub1", "sub2"],
+    "horizon_minutes": 360
+  }
+]

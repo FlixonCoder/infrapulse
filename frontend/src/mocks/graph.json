@@ -1,0 +1,292 @@
+{
+  "nodes": [
+    {
+      "id": "sub1",
+      "name": "Marathahalli substation",
+      "type": "substation",
+      "dept": "electricity",
+      "lat": 12.9565,
+      "lng": 77.6975,
+      "criticality": 5
+    },
+    {
+      "id": "sub2",
+      "name": "Bellandur substation",
+      "type": "substation",
+      "dept": "electricity",
+      "lat": 12.934,
+      "lng": 77.724,
+      "criticality": 5
+    },
+    {
+      "id": "pump1",
+      "name": "Munnekolala pump station",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.95,
+      "lng": 77.712,
+      "criticality": 4
+    },
+    {
+      "id": "pump2",
+      "name": "Bellandur water works",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.927,
+      "lng": 77.71,
+      "criticality": 4
+    },
+    {
+      "id": "tower1",
+      "name": "Marathahalli tower",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.965,
+      "lng": 77.708,
+      "criticality": 3
+    },
+    {
+      "id": "tower2",
+      "name": "Kadubeesanahalli tower",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.9415,
+      "lng": 77.701,
+      "criticality": 3
+    },
+    {
+      "id": "tower3",
+      "name": "Varthur relay tower",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.952,
+      "lng": 77.736,
+      "criticality": 3
+    },
+    {
+      "id": "signal1",
+      "name": "Marathahalli bridge signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.957,
+      "lng": 77.69,
+      "criticality": 3
+    },
+    {
+      "id": "signal2",
+      "name": "Spice Garden junction",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.966,
+      "lng": 77.72,
+      "criticality": 2
+    },
+    {
+      "id": "signal3",
+      "name": "ORR junction signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.938,
+      "lng": 77.692,
+      "criticality": 4
+    },
+    {
+      "id": "signal4",
+      "name": "Panathur junction signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.941,
+      "lng": 77.717,
+      "criticality": 3
+    },
+    {
+      "id": "hospital1",
+      "name": "Sakra World Hospital",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.932,
+      "lng": 77.686,
+      "criticality": 5
+    },
+    {
+      "id": "hospital2",
+      "name": "New Horizon Medical Centre",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.968,
+      "lng": 77.734,
+      "criticality": 5
+    },
+    {
+      "id": "hospital3",
+      "name": "Varthur Community Hospital",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.944,
+      "lng": 77.741,
+      "criticality": 4
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "sub1",
+      "target": "pump1",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e2",
+      "source": "sub1",
+      "target": "tower1",
+      "relation": "powers",
+      "buffer_minutes": 25,
+      "group": "power"
+    },
+    {
+      "id": "e3",
+      "source": "sub1",
+      "target": "signal1",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e4",
+      "source": "sub1",
+      "target": "signal2",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e5",
+      "source": "sub1",
+      "target": "hospital1",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e6",
+      "source": "sub2",
+      "target": "pump2",
+      "relation": "powers",
+      "buffer_minutes": 15,
+      "group": "power"
+    },
+    {
+      "id": "e7",
+      "source": "sub2",
+      "target": "tower2",
+      "relation": "powers",
+      "buffer_minutes": 45,
+      "group": "power"
+    },
+    {
+      "id": "e8",
+      "source": "sub2",
+      "target": "signal3",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e9",
+      "source": "sub2",
+      "target": "signal4",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e10",
+      "source": "sub2",
+      "target": "hospital2",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e11",
+      "source": "sub1",
+      "target": "tower3",
+      "relation": "powers",
+      "buffer_minutes": 45,
+      "group": "power"
+    },
+    {
+      "id": "e12",
+      "source": "sub2",
+      "target": "tower3",
+      "relation": "powers",
+      "buffer_minutes": 45,
+      "group": "power"
+    },
+    {
+      "id": "e13",
+      "source": "sub1",
+      "target": "hospital3",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e14",
+      "source": "sub2",
+      "target": "hospital3",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e15",
+      "source": "tower1",
+      "target": "tower2",
+      "relation": "telecom_link",
+      "buffer_minutes": 20,
+      "group": "backhaul"
+    },
+    {
+      "id": "e16",
+      "source": "tower2",
+      "target": "signal3",
+      "relation": "telecom_link",
+      "buffer_minutes": 5,
+      "group": "telecom"
+    },
+    {
+      "id": "e17",
+      "source": "tower1",
+      "target": "signal4",
+      "relation": "telecom_link",
+      "buffer_minutes": 10,
+      "group": "telecom"
+    },
+    {
+      "id": "e18",
+      "source": "tower2",
+      "target": "hospital2",
+      "relation": "telecom_link",
+      "buffer_minutes": 195,
+      "group": "telecom"
+    },
+    {
+      "id": "e19",
+      "source": "pump1",
+      "target": "hospital1",
+      "relation": "supplies_water",
+      "buffer_minutes": 300,
+      "group": "water"
+    },
+    {
+      "id": "e20",
+      "source": "pump1",
+      "target": "hospital3",
+      "relation": "supplies_water",
+      "buffer_minutes": 400,
+      "group": "water"
+    }
+  ]
+}

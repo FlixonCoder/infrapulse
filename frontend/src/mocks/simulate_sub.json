@@ -1,0 +1,212 @@
+{
+  "scenario": {
+    "trigger_node_ids": ["sub1"],
+    "horizon_minutes": 360
+  },
+  "nodes": [
+    {
+      "node_id": "sub1",
+      "lost_input_at": 0,
+      "fails_at": 0,
+      "caused_by": null,
+      "depth": 0
+    },
+    {
+      "node_id": "pump1",
+      "lost_input_at": 0,
+      "fails_at": 10,
+      "caused_by": {
+        "source_id": "sub1",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "tower1",
+      "lost_input_at": 0,
+      "fails_at": 25,
+      "caused_by": {
+        "source_id": "sub1",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "signal1",
+      "lost_input_at": 0,
+      "fails_at": 0,
+      "caused_by": {
+        "source_id": "sub1",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "signal2",
+      "lost_input_at": 0,
+      "fails_at": 10,
+      "caused_by": {
+        "source_id": "sub1",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "hospital1",
+      "lost_input_at": 0,
+      "fails_at": 240,
+      "caused_by": {
+        "source_id": "sub1",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "tower2",
+      "lost_input_at": 25,
+      "fails_at": 45,
+      "caused_by": {
+        "source_id": "tower1",
+        "relation": "telecom_link"
+      },
+      "depth": 2
+    },
+    {
+      "node_id": "signal3",
+      "lost_input_at": 45,
+      "fails_at": 50,
+      "caused_by": {
+        "source_id": "tower2",
+        "relation": "telecom_link"
+      },
+      "depth": 3
+    },
+    {
+      "node_id": "signal4",
+      "lost_input_at": 25,
+      "fails_at": 35,
+      "caused_by": {
+        "source_id": "tower1",
+        "relation": "telecom_link"
+      },
+      "depth": 2
+    },
+    {
+      "node_id": "hospital2",
+      "lost_input_at": 45,
+      "fails_at": 240,
+      "caused_by": {
+        "source_id": "tower2",
+        "relation": "telecom_link"
+      },
+      "depth": 3
+    },
+    {
+      "node_id": "hospital3",
+      "lost_input_at": 10,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "pump1",
+        "relation": "supplies_water"
+      },
+      "depth": 2
+    }
+  ],
+  "summary": {
+    "nodes_down": 10,
+    "nodes_at_risk": 1,
+    "down_by_type": {
+      "substation": 1,
+      "water_pump": 1,
+      "cell_tower": 2,
+      "signal_cluster": 4,
+      "hospital": 2
+    },
+    "first_hospital_down_at": 240,
+    "hospitals_down": ["hospital1", "hospital2"],
+    "hospitals_at_risk": ["hospital3"]
+  },
+  "actions": [
+    {
+      "id": "a1",
+      "dept": "electricity",
+      "node_id": "sub1",
+      "severity": "critical",
+      "priority": 1,
+      "act_by_minute": 0,
+      "title": "Isolate the failed substation",
+      "detail": "Dispatch a field crew to Marathahalli. Isolate the fault and assess the alternate feed."
+    },
+    {
+      "id": "a2",
+      "dept": "traffic",
+      "node_id": "signal1",
+      "severity": "critical",
+      "priority": 0.96,
+      "act_by_minute": 0,
+      "title": "Deploy junction response teams",
+      "detail": "Position traffic marshals at Marathahalli bridge. Signals lose power immediately."
+    },
+    {
+      "id": "a3",
+      "dept": "water",
+      "node_id": "pump1",
+      "severity": "high",
+      "priority": 0.92,
+      "act_by_minute": 10,
+      "title": "Restore power to the pump station",
+      "detail": "Connect mobile generation before the 10-minute power buffer is exhausted."
+    },
+    {
+      "id": "a4",
+      "dept": "telecom",
+      "node_id": "tower1",
+      "severity": "high",
+      "priority": 0.88,
+      "act_by_minute": 25,
+      "title": "Keep the backhaul online",
+      "detail": "Deploy portable power at Marathahalli tower to protect downstream connectivity."
+    },
+    {
+      "id": "a5",
+      "dept": "traffic",
+      "node_id": "signal4",
+      "severity": "high",
+      "priority": 0.8,
+      "act_by_minute": 35,
+      "title": "Secure Panathur junction",
+      "detail": "Prepare manual control before the telecom dependency is lost."
+    },
+    {
+      "id": "a6",
+      "dept": "telecom",
+      "node_id": "tower2",
+      "severity": "high",
+      "priority": 0.76,
+      "act_by_minute": 45,
+      "title": "Switch to an alternate backhaul",
+      "detail": "Reroute the Kadubeesanahalli tower link before connectivity is exhausted."
+    },
+    {
+      "id": "a7",
+      "dept": "health",
+      "node_id": "hospital1",
+      "severity": "critical",
+      "priority": 0.72,
+      "act_by_minute": 240,
+      "title": "Replenish hospital backup power",
+      "detail": "Deliver generator fuel to Sakra World Hospital. Coordinate critical patient transfers if needed."
+    },
+    {
+      "id": "a8",
+      "dept": "health",
+      "node_id": "hospital2",
+      "severity": "high",
+      "priority": 0.68,
+      "act_by_minute": 240,
+      "title": "Protect emergency communications",
+      "detail": "Activate independent communications at New Horizon Medical Centre before link backup expires."
+    }
+  ],
+  "briefing": "A Marathahalli substation failure disrupts 11 of the 14 monitored assets within this six-hour window. Traffic signals fail immediately, followed by the water pump at 10 minutes and telecom backhaul at 25 minutes. Two hospitals exhaust a critical dependency at T+4h; Varthur Community Hospital remains on water reserves throughout the window. Restore the substation and protect telecom backhaul first to limit the cascade."
+}

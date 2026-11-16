@@ -1,0 +1,79 @@
+{
+  "scenario": {
+    "trigger_node_ids": ["pump1"],
+    "horizon_minutes": 360
+  },
+  "nodes": [
+    {
+      "node_id": "pump1",
+      "lost_input_at": 0,
+      "fails_at": 0,
+      "caused_by": null,
+      "depth": 0
+    },
+    {
+      "node_id": "hospital1",
+      "lost_input_at": 0,
+      "fails_at": 300,
+      "caused_by": {
+        "source_id": "pump1",
+        "relation": "supplies_water"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "hospital3",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "pump1",
+        "relation": "supplies_water"
+      },
+      "depth": 1
+    }
+  ],
+  "summary": {
+    "nodes_down": 2,
+    "nodes_at_risk": 1,
+    "down_by_type": {
+      "water_pump": 1,
+      "hospital": 1
+    },
+    "first_hospital_down_at": 300,
+    "hospitals_down": ["hospital1"],
+    "hospitals_at_risk": ["hospital3"]
+  },
+  "actions": [
+    {
+      "id": "w1",
+      "dept": "water",
+      "node_id": "pump1",
+      "severity": "critical",
+      "priority": 1,
+      "act_by_minute": 0,
+      "title": "Restore the pump station",
+      "detail": "Dispatch water operations and arrange an alternate supply."
+    },
+    {
+      "id": "w2",
+      "dept": "health",
+      "node_id": "hospital1",
+      "severity": "high",
+      "priority": 0.9,
+      "act_by_minute": 300,
+      "title": "Replenish hospital water storage",
+      "detail": "Arrange tanker supply before Sakra World Hospital exhausts its five-hour reserve."
+    },
+    {
+      "id": "w3",
+      "dept": "health",
+      "node_id": "hospital3",
+      "severity": "medium",
+      "priority": 0.6,
+      "act_by_minute": 360,
+      "title": "Monitor community hospital reserves",
+      "detail": "Water backup lasts beyond this window. Confirm resupply arrangements."
+    }
+  ],
+  "briefing": "A pump failure interrupts water service to two hospitals. Sakra World Hospital exhausts its water storage after five hours. Varthur Community Hospital retains reserves for the full six-hour window. Restore the pump or deliver water before the hospital deadline."
+}

@@ -1,0 +1,279 @@
+{
+  "scenario": {
+    "trigger_node_ids": [
+      "sub_66_marathahalli"
+    ],
+    "horizon_minutes": 360
+  },
+  "nodes": [
+    {
+      "node_id": "sig_outer_ring_1",
+      "lost_input_at": 0,
+      "fails_at": 0,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "sub_66_marathahalli",
+      "lost_input_at": 0,
+      "fails_at": 0,
+      "caused_by": null,
+      "depth": 0
+    },
+    {
+      "node_id": "sig_marathahalli_1",
+      "lost_input_at": 0,
+      "fails_at": 5,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "sig_outer_ring_2",
+      "lost_input_at": 0,
+      "fails_at": 10,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "pump_marathahalli_1",
+      "lost_input_at": 0,
+      "fails_at": 15,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "hosp_03",
+      "lost_input_at": 0,
+      "fails_at": 25,
+      "caused_by": {
+        "source_id": "sig_marathahalli_1",
+        "relation": "road_access"
+      },
+      "depth": 2
+    },
+    {
+      "node_id": "pump_marathahalli_2",
+      "lost_input_at": 0,
+      "fails_at": 30,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "tower_01",
+      "lost_input_at": 0,
+      "fails_at": 120,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "tower_02",
+      "lost_input_at": 0,
+      "fails_at": 150,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "hosp_01",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "hosp_04",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "pump_kundalahalli_1",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "sig_marathahalli_2",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "sig_outer_ring_3",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "tower_03",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    },
+    {
+      "node_id": "tower_06",
+      "lost_input_at": 0,
+      "fails_at": null,
+      "caused_by": {
+        "source_id": "sub_66_marathahalli",
+        "relation": "powers"
+      },
+      "depth": 1
+    }
+  ],
+  "summary": {
+    "nodes_down": 9,
+    "nodes_at_risk": 7,
+    "down_by_type": {
+      "signal_cluster": 3,
+      "substation": 1,
+      "water_pump": 2,
+      "hospital": 1,
+      "cell_tower": 2
+    },
+    "first_hospital_down_at": 25,
+    "hospitals_down": [
+      "hosp_03"
+    ],
+    "hospitals_at_risk": [
+      "hosp_01",
+      "hosp_04"
+    ]
+  },
+  "actions": [
+    {
+      "id": "a01",
+      "dept": "health",
+      "node_id": "hosp_03",
+      "severity": "critical",
+      "priority": 1.0,
+      "act_by_minute": 0,
+      "title": "Reroute ambulances away from Rainbow Children's Hospital Marathahalli access roads",
+      "detail": "Hospital impacted at T+25 (road_access). Act before T+0."
+    },
+    {
+      "id": "a02",
+      "dept": "electricity",
+      "node_id": "sub_66_marathahalli",
+      "severity": "critical",
+      "priority": 0.8,
+      "act_by_minute": 0,
+      "title": "Restore or reroute load for Marathahalli 66kV Substation",
+      "detail": "Fault at T+0. Isolate the fault, reroute load, and brief the other teams. 15 downstream nodes depend on it."
+    },
+    {
+      "id": "a03",
+      "dept": "water",
+      "node_id": "pump_marathahalli_1",
+      "severity": "critical",
+      "priority": 0.6,
+      "act_by_minute": 0,
+      "title": "Arrange tankers or backup supply for Marathahalli Booster Pump 1",
+      "detail": "Pump loses power and stops at T+15."
+    },
+    {
+      "id": "a04",
+      "dept": "water",
+      "node_id": "pump_marathahalli_2",
+      "severity": "critical",
+      "priority": 0.6,
+      "act_by_minute": 0,
+      "title": "Arrange tankers or backup supply for Marathahalli Overhead Pump 2",
+      "detail": "Pump loses power and stops at T+30."
+    },
+    {
+      "id": "a05",
+      "dept": "traffic",
+      "node_id": "sig_outer_ring_1",
+      "severity": "high",
+      "priority": 0.4,
+      "act_by_minute": 0,
+      "title": "Deploy traffic police at ORR Marathahalli Junction Signals",
+      "detail": "Signals go dark at T+0. Expect jams within 10-15 minutes."
+    },
+    {
+      "id": "a06",
+      "dept": "traffic",
+      "node_id": "sig_marathahalli_1",
+      "severity": "high",
+      "priority": 0.369,
+      "act_by_minute": 5,
+      "title": "Deploy traffic police at Marathahalli Market Signals",
+      "detail": "Signals go dark at T+5. Expect jams within 10-15 minutes."
+    },
+    {
+      "id": "a07",
+      "dept": "traffic",
+      "node_id": "sig_outer_ring_2",
+      "severity": "medium",
+      "priority": 0.343,
+      "act_by_minute": 10,
+      "title": "Deploy traffic police at ORR Karthik Nagar Signals",
+      "detail": "Signals go dark at T+10. Expect jams within 10-15 minutes."
+    },
+    {
+      "id": "a08",
+      "dept": "telecom",
+      "node_id": "tower_01",
+      "severity": "medium",
+      "priority": 0.3,
+      "act_by_minute": 60,
+      "title": "Dispatch backup power to Marathahalli Bridge Tower 01",
+      "detail": "Battery ends at T+120. Send a generator or fuel before T+60."
+    },
+    {
+      "id": "a09",
+      "dept": "telecom",
+      "node_id": "tower_02",
+      "severity": "medium",
+      "priority": 0.24,
+      "act_by_minute": 90,
+      "title": "Dispatch backup power to HAL Airport Rd Tower 02",
+      "detail": "Battery ends at T+150. Send a generator or fuel before T+90."
+    }
+  ],
+  "briefing": "Failure at Marathahalli 66kV Substation triggers a 360-minute cascade leaving 9 nodes down and 7 nodes at risk. Within the first 15 minutes, 5 node(s) fail across the electricity, traffic, water department(s). First hospital impact occurs at T+25 minutes (Rainbow Children's Hospital Marathahalli). Top priorities: (1) Reroute ambulances away from Rainbow Children's Hospital Marathahalli access roads by T+0 min; (2) Restore or reroute load for Marathahalli 66kV Substation by T+0 min."
+}

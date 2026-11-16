@@ -1,0 +1,831 @@
+{
+  "nodes": [
+    {
+      "id": "sub_220_whitefield",
+      "name": "Whitefield 220kV Transmission Substation",
+      "type": "substation",
+      "dept": "electricity",
+      "lat": 12.9698,
+      "lng": 77.742,
+      "criticality": 5
+    },
+    {
+      "id": "sub_66_marathahalli",
+      "name": "Marathahalli 66kV Substation",
+      "type": "substation",
+      "dept": "electricity",
+      "lat": 12.9562,
+      "lng": 77.701,
+      "criticality": 4
+    },
+    {
+      "id": "sub_66_bellandur",
+      "name": "Bellandur 66kV Substation",
+      "type": "substation",
+      "dept": "electricity",
+      "lat": 12.9279,
+      "lng": 77.6762,
+      "criticality": 4
+    },
+    {
+      "id": "sub_66_brookefield",
+      "name": "Brookefield 66kV Substation",
+      "type": "substation",
+      "dept": "electricity",
+      "lat": 12.966,
+      "lng": 77.7175,
+      "criticality": 4
+    },
+    {
+      "id": "pump_marathahalli_1",
+      "name": "Marathahalli Booster Pump 1",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.954,
+      "lng": 77.698,
+      "criticality": 3
+    },
+    {
+      "id": "pump_marathahalli_2",
+      "name": "Marathahalli Overhead Pump 2",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.9585,
+      "lng": 77.7055,
+      "criticality": 3
+    },
+    {
+      "id": "pump_bellandur_1",
+      "name": "Bellandur Lake Pump 1",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.931,
+      "lng": 77.679,
+      "criticality": 3
+    },
+    {
+      "id": "pump_bellandur_2",
+      "name": "Bellandur East Pump 2",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.9255,
+      "lng": 77.6845,
+      "criticality": 3
+    },
+    {
+      "id": "pump_whitefield_1",
+      "name": "Whitefield Main Pump 1",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.968,
+      "lng": 77.736,
+      "criticality": 3
+    },
+    {
+      "id": "pump_kundalahalli_1",
+      "name": "Kundalahalli Sump Pump 1",
+      "type": "water_pump",
+      "dept": "water",
+      "lat": 12.9625,
+      "lng": 77.715,
+      "criticality": 3
+    },
+    {
+      "id": "tower_01",
+      "name": "Marathahalli Bridge Tower 01",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.955,
+      "lng": 77.7,
+      "criticality": 3
+    },
+    {
+      "id": "tower_02",
+      "name": "HAL Airport Rd Tower 02",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.959,
+      "lng": 77.694,
+      "criticality": 3
+    },
+    {
+      "id": "tower_03",
+      "name": "Outer Ring Kadubeesanahalli Tower 03",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.942,
+      "lng": 77.697,
+      "criticality": 3
+    },
+    {
+      "id": "tower_04",
+      "name": "Bellandur Gate Tower 04",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.929,
+      "lng": 77.6745,
+      "criticality": 3
+    },
+    {
+      "id": "tower_05",
+      "name": "Ecospace Bellandur Tower 05",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.9265,
+      "lng": 77.682,
+      "criticality": 3
+    },
+    {
+      "id": "tower_06",
+      "name": "Brookefield Mall Tower 06",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.9655,
+      "lng": 77.7185,
+      "criticality": 3
+    },
+    {
+      "id": "tower_07",
+      "name": "ITPL Main Rd Tower 07",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.9715,
+      "lng": 77.734,
+      "criticality": 3
+    },
+    {
+      "id": "tower_08",
+      "name": "Varthur Kodi Tower 08",
+      "type": "cell_tower",
+      "dept": "telecom",
+      "lat": 12.958,
+      "lng": 77.744,
+      "criticality": 3
+    },
+    {
+      "id": "sig_outer_ring_1",
+      "name": "ORR Marathahalli Junction Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9565,
+      "lng": 77.7015,
+      "criticality": 2
+    },
+    {
+      "id": "sig_outer_ring_2",
+      "name": "ORR Karthik Nagar Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.961,
+      "lng": 77.6985,
+      "criticality": 2
+    },
+    {
+      "id": "sig_outer_ring_3",
+      "name": "ORR Kadubeesanahalli Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9405,
+      "lng": 77.6955,
+      "criticality": 2
+    },
+    {
+      "id": "sig_outer_ring_4",
+      "name": "ORR Devarabeesanahalli Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9335,
+      "lng": 77.6905,
+      "criticality": 2
+    },
+    {
+      "id": "sig_marathahalli_1",
+      "name": "Marathahalli Market Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9545,
+      "lng": 77.704,
+      "criticality": 2
+    },
+    {
+      "id": "sig_marathahalli_2",
+      "name": "Kundalahalli Gate Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9595,
+      "lng": 77.7115,
+      "criticality": 2
+    },
+    {
+      "id": "sig_bellandur_1",
+      "name": "Bellandur Central Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9285,
+      "lng": 77.6775,
+      "criticality": 2
+    },
+    {
+      "id": "sig_bellandur_2",
+      "name": "Iblur Junction Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9225,
+      "lng": 77.6725,
+      "criticality": 2
+    },
+    {
+      "id": "sig_whitefield_1",
+      "name": "AECS Layout Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.9645,
+      "lng": 77.716,
+      "criticality": 2
+    },
+    {
+      "id": "sig_whitefield_2",
+      "name": "ITPL Hope Farm Signals",
+      "type": "signal_cluster",
+      "dept": "traffic",
+      "lat": 12.974,
+      "lng": 77.746,
+      "criticality": 2
+    },
+    {
+      "id": "hosp_01",
+      "name": "Sakra World Hospital",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.9305,
+      "lng": 77.6865,
+      "criticality": 5
+    },
+    {
+      "id": "hosp_02",
+      "name": "Manipal Hospital Whitefield",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.971,
+      "lng": 77.7375,
+      "criticality": 5
+    },
+    {
+      "id": "hosp_03",
+      "name": "Rainbow Children's Hospital Marathahalli",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.957,
+      "lng": 77.7005,
+      "criticality": 5
+    },
+    {
+      "id": "hosp_04",
+      "name": "Brookefield Hospital",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.9665,
+      "lng": 77.7165,
+      "criticality": 5
+    },
+    {
+      "id": "hosp_05",
+      "name": "Cloudnine Hospital Bellandur",
+      "type": "hospital",
+      "dept": "health",
+      "lat": 12.926,
+      "lng": 77.678,
+      "criticality": 5
+    }
+  ],
+  "edges": [
+    {
+      "id": "e001",
+      "source": "sub_220_whitefield",
+      "target": "sub_66_marathahalli",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e002",
+      "source": "sub_220_whitefield",
+      "target": "sub_66_bellandur",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e003",
+      "source": "sub_220_whitefield",
+      "target": "sub_66_brookefield",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e004",
+      "source": "sub_66_marathahalli",
+      "target": "pump_marathahalli_1",
+      "relation": "powers",
+      "buffer_minutes": 15,
+      "group": "power"
+    },
+    {
+      "id": "e005",
+      "source": "sub_66_marathahalli",
+      "target": "pump_marathahalli_2",
+      "relation": "powers",
+      "buffer_minutes": 30,
+      "group": "power"
+    },
+    {
+      "id": "e006",
+      "source": "sub_66_bellandur",
+      "target": "pump_bellandur_1",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e007",
+      "source": "sub_66_bellandur",
+      "target": "pump_bellandur_2",
+      "relation": "powers",
+      "buffer_minutes": 40,
+      "group": "power"
+    },
+    {
+      "id": "e008",
+      "source": "sub_66_brookefield",
+      "target": "pump_whitefield_1",
+      "relation": "powers",
+      "buffer_minutes": 20,
+      "group": "power"
+    },
+    {
+      "id": "e009",
+      "source": "sub_66_brookefield",
+      "target": "pump_kundalahalli_1",
+      "relation": "powers",
+      "buffer_minutes": 35,
+      "group": "power"
+    },
+    {
+      "id": "e010",
+      "source": "sub_66_marathahalli",
+      "target": "pump_kundalahalli_1",
+      "relation": "powers",
+      "buffer_minutes": 35,
+      "group": "power"
+    },
+    {
+      "id": "e011",
+      "source": "sub_66_marathahalli",
+      "target": "tower_01",
+      "relation": "powers",
+      "buffer_minutes": 120,
+      "group": "power"
+    },
+    {
+      "id": "e012",
+      "source": "sub_66_marathahalli",
+      "target": "tower_02",
+      "relation": "powers",
+      "buffer_minutes": 150,
+      "group": "power"
+    },
+    {
+      "id": "e013",
+      "source": "sub_66_marathahalli",
+      "target": "tower_03",
+      "relation": "powers",
+      "buffer_minutes": 180,
+      "group": "power"
+    },
+    {
+      "id": "e014",
+      "source": "sub_66_bellandur",
+      "target": "tower_03",
+      "relation": "powers",
+      "buffer_minutes": 180,
+      "group": "power"
+    },
+    {
+      "id": "e015",
+      "source": "sub_66_bellandur",
+      "target": "tower_04",
+      "relation": "powers",
+      "buffer_minutes": 210,
+      "group": "power"
+    },
+    {
+      "id": "e016",
+      "source": "sub_66_bellandur",
+      "target": "tower_05",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e017",
+      "source": "sub_66_brookefield",
+      "target": "tower_06",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e018",
+      "source": "sub_66_marathahalli",
+      "target": "tower_06",
+      "relation": "powers",
+      "buffer_minutes": 240,
+      "group": "power"
+    },
+    {
+      "id": "e019",
+      "source": "sub_66_brookefield",
+      "target": "tower_07",
+      "relation": "powers",
+      "buffer_minutes": 300,
+      "group": "power"
+    },
+    {
+      "id": "e020",
+      "source": "sub_66_brookefield",
+      "target": "tower_08",
+      "relation": "powers",
+      "buffer_minutes": 360,
+      "group": "power"
+    },
+    {
+      "id": "e021",
+      "source": "sub_66_marathahalli",
+      "target": "sig_outer_ring_1",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e022",
+      "source": "sub_66_marathahalli",
+      "target": "sig_outer_ring_2",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e023",
+      "source": "sub_66_marathahalli",
+      "target": "sig_outer_ring_3",
+      "relation": "powers",
+      "buffer_minutes": 15,
+      "group": "power"
+    },
+    {
+      "id": "e024",
+      "source": "sub_66_bellandur",
+      "target": "sig_outer_ring_3",
+      "relation": "powers",
+      "buffer_minutes": 15,
+      "group": "power"
+    },
+    {
+      "id": "e025",
+      "source": "sub_66_bellandur",
+      "target": "sig_outer_ring_4",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e026",
+      "source": "sub_66_marathahalli",
+      "target": "sig_marathahalli_1",
+      "relation": "powers",
+      "buffer_minutes": 5,
+      "group": "power"
+    },
+    {
+      "id": "e027",
+      "source": "sub_66_marathahalli",
+      "target": "sig_marathahalli_2",
+      "relation": "powers",
+      "buffer_minutes": 20,
+      "group": "power"
+    },
+    {
+      "id": "e028",
+      "source": "sub_66_brookefield",
+      "target": "sig_marathahalli_2",
+      "relation": "powers",
+      "buffer_minutes": 20,
+      "group": "power"
+    },
+    {
+      "id": "e029",
+      "source": "sub_66_bellandur",
+      "target": "sig_bellandur_1",
+      "relation": "powers",
+      "buffer_minutes": 0,
+      "group": "power"
+    },
+    {
+      "id": "e030",
+      "source": "sub_66_bellandur",
+      "target": "sig_bellandur_2",
+      "relation": "powers",
+      "buffer_minutes": 15,
+      "group": "power"
+    },
+    {
+      "id": "e031",
+      "source": "sub_66_brookefield",
+      "target": "sig_whitefield_1",
+      "relation": "powers",
+      "buffer_minutes": 10,
+      "group": "power"
+    },
+    {
+      "id": "e032",
+      "source": "sub_66_brookefield",
+      "target": "sig_whitefield_2",
+      "relation": "powers",
+      "buffer_minutes": 20,
+      "group": "power"
+    },
+    {
+      "id": "e033",
+      "source": "sub_66_bellandur",
+      "target": "hosp_01",
+      "relation": "powers",
+      "buffer_minutes": 720,
+      "group": "power"
+    },
+    {
+      "id": "e034",
+      "source": "sub_66_marathahalli",
+      "target": "hosp_01",
+      "relation": "powers",
+      "buffer_minutes": 720,
+      "group": "power"
+    },
+    {
+      "id": "e035",
+      "source": "sub_66_brookefield",
+      "target": "hosp_02",
+      "relation": "powers",
+      "buffer_minutes": 660,
+      "group": "power"
+    },
+    {
+      "id": "e036",
+      "source": "sub_66_marathahalli",
+      "target": "hosp_03",
+      "relation": "powers",
+      "buffer_minutes": 600,
+      "group": "power"
+    },
+    {
+      "id": "e037",
+      "source": "sub_66_brookefield",
+      "target": "hosp_04",
+      "relation": "powers",
+      "buffer_minutes": 660,
+      "group": "power"
+    },
+    {
+      "id": "e038",
+      "source": "sub_66_marathahalli",
+      "target": "hosp_04",
+      "relation": "powers",
+      "buffer_minutes": 660,
+      "group": "power"
+    },
+    {
+      "id": "e039",
+      "source": "sub_66_bellandur",
+      "target": "hosp_05",
+      "relation": "powers",
+      "buffer_minutes": 600,
+      "group": "power"
+    },
+    {
+      "id": "e040",
+      "source": "pump_bellandur_1",
+      "target": "hosp_01",
+      "relation": "supplies_water",
+      "buffer_minutes": 720,
+      "group": "water"
+    },
+    {
+      "id": "e041",
+      "source": "pump_bellandur_2",
+      "target": "hosp_01",
+      "relation": "supplies_water",
+      "buffer_minutes": 720,
+      "group": "water"
+    },
+    {
+      "id": "e042",
+      "source": "pump_whitefield_1",
+      "target": "hosp_02",
+      "relation": "supplies_water",
+      "buffer_minutes": 960,
+      "group": "water"
+    },
+    {
+      "id": "e043",
+      "source": "pump_marathahalli_1",
+      "target": "hosp_03",
+      "relation": "supplies_water",
+      "buffer_minutes": 480,
+      "group": "water"
+    },
+    {
+      "id": "e044",
+      "source": "pump_marathahalli_2",
+      "target": "hosp_03",
+      "relation": "supplies_water",
+      "buffer_minutes": 600,
+      "group": "water"
+    },
+    {
+      "id": "e045",
+      "source": "pump_kundalahalli_1",
+      "target": "hosp_04",
+      "relation": "supplies_water",
+      "buffer_minutes": 720,
+      "group": "water"
+    },
+    {
+      "id": "e046",
+      "source": "pump_bellandur_1",
+      "target": "hosp_05",
+      "relation": "supplies_water",
+      "buffer_minutes": 540,
+      "group": "water"
+    },
+    {
+      "id": "e047",
+      "source": "tower_03",
+      "target": "hosp_01",
+      "relation": "telecom_link",
+      "buffer_minutes": 45,
+      "group": "telecom"
+    },
+    {
+      "id": "e048",
+      "source": "tower_05",
+      "target": "hosp_01",
+      "relation": "telecom_link",
+      "buffer_minutes": 45,
+      "group": "telecom"
+    },
+    {
+      "id": "e049",
+      "source": "tower_07",
+      "target": "hosp_02",
+      "relation": "telecom_link",
+      "buffer_minutes": 60,
+      "group": "telecom"
+    },
+    {
+      "id": "e050",
+      "source": "tower_08",
+      "target": "hosp_02",
+      "relation": "telecom_link",
+      "buffer_minutes": 60,
+      "group": "telecom"
+    },
+    {
+      "id": "e051",
+      "source": "tower_01",
+      "target": "hosp_03",
+      "relation": "telecom_link",
+      "buffer_minutes": 30,
+      "group": "telecom"
+    },
+    {
+      "id": "e052",
+      "source": "tower_02",
+      "target": "hosp_03",
+      "relation": "telecom_link",
+      "buffer_minutes": 45,
+      "group": "telecom"
+    },
+    {
+      "id": "e053",
+      "source": "tower_06",
+      "target": "hosp_04",
+      "relation": "telecom_link",
+      "buffer_minutes": 45,
+      "group": "telecom"
+    },
+    {
+      "id": "e054",
+      "source": "tower_02",
+      "target": "hosp_04",
+      "relation": "telecom_link",
+      "buffer_minutes": 45,
+      "group": "telecom"
+    },
+    {
+      "id": "e055",
+      "source": "tower_04",
+      "target": "hosp_05",
+      "relation": "telecom_link",
+      "buffer_minutes": 30,
+      "group": "telecom"
+    },
+    {
+      "id": "e056",
+      "source": "tower_05",
+      "target": "hosp_05",
+      "relation": "telecom_link",
+      "buffer_minutes": 45,
+      "group": "telecom"
+    },
+    {
+      "id": "e057",
+      "source": "sig_outer_ring_3",
+      "target": "hosp_01",
+      "relation": "road_access",
+      "buffer_minutes": 15,
+      "group": "road"
+    },
+    {
+      "id": "e058",
+      "source": "sig_outer_ring_4",
+      "target": "hosp_01",
+      "relation": "road_access",
+      "buffer_minutes": 15,
+      "group": "road"
+    },
+    {
+      "id": "e059",
+      "source": "sig_whitefield_2",
+      "target": "hosp_02",
+      "relation": "road_access",
+      "buffer_minutes": 20,
+      "group": "road"
+    },
+    {
+      "id": "e060",
+      "source": "sig_whitefield_1",
+      "target": "hosp_02",
+      "relation": "road_access",
+      "buffer_minutes": 20,
+      "group": "road"
+    },
+    {
+      "id": "e061",
+      "source": "sig_outer_ring_1",
+      "target": "hosp_03",
+      "relation": "road_access",
+      "buffer_minutes": 15,
+      "group": "road"
+    },
+    {
+      "id": "e062",
+      "source": "sig_marathahalli_1",
+      "target": "hosp_03",
+      "relation": "road_access",
+      "buffer_minutes": 20,
+      "group": "road"
+    },
+    {
+      "id": "e063",
+      "source": "sig_marathahalli_2",
+      "target": "hosp_04",
+      "relation": "road_access",
+      "buffer_minutes": 15,
+      "group": "road"
+    },
+    {
+      "id": "e064",
+      "source": "sig_whitefield_1",
+      "target": "hosp_04",
+      "relation": "road_access",
+      "buffer_minutes": 15,
+      "group": "road"
+    },
+    {
+      "id": "e065",
+      "source": "sig_bellandur_1",
+      "target": "hosp_05",
+      "relation": "road_access",
+      "buffer_minutes": 10,
+      "group": "road"
+    },
+    {
+      "id": "e066",
+      "source": "sig_bellandur_2",
+      "target": "hosp_05",
+      "relation": "road_access",
+      "buffer_minutes": 15,
+      "group": "road"
+    }
+  ]
+}

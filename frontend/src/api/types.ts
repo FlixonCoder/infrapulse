@@ -1,0 +1,14 @@
+import type { z } from 'zod';
+import type { nodeTypeSchema, deptSchema, relationSchema, nodeSchema, edgeSchema, graphSchema, scenarioSchema, requestSchema, affectedSchema, summarySchema, actionSchema, resultSchema } from './schemas';
+export type NodeType = z.infer<typeof nodeTypeSchema>;
+export type Dept = z.infer<typeof deptSchema>;
+export type Relation = z.infer<typeof relationSchema>;
+export type GraphNode = z.infer<typeof nodeSchema>;
+export type GraphEdge = z.infer<typeof edgeSchema>;
+export type Graph = z.infer<typeof graphSchema>;
+export type Scenario = z.infer<typeof scenarioSchema>;
+export type SimulateRequest = z.infer<typeof requestSchema>;
+export type AffectedNode = z.infer<typeof affectedSchema>;
+export type Summary = z.infer<typeof summarySchema>;
+export type Action = z.infer<typeof actionSchema>;
+export type SimulationResult = z.infer<typeof resultSchema>;

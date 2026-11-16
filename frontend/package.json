@@ -1,0 +1,40 @@
+{
+  "name": "infrapulse",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "test": "vitest run",
+    "preview": "vite preview --host 0.0.0.0",
+    "format": "prettier --write src --ignore-path .prettierignore",
+    "format:check": "prettier --check src --ignore-path .prettierignore",
+    "test:live": "VITE_USE_MOCK=false vitest run src/api/live.test.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.2.8",
+    "@fontsource-variable/jetbrains-mono": "5.2.8",
+    "@fontsource-variable/manrope": "5.2.8",
+    "leaflet": "1.9.4",
+    "lucide-react": "0.468.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-leaflet": "4.2.1",
+    "zod": "4.6.7",
+    "zustand": "5.0.2"
+  },
+  "devDependencies": {
+    "@types/leaflet": "1.9.15",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.7.0",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.5.33",
+    "prettier": "3.6.2",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.3",
+    "vite": "6.4.6",
+    "vitest": "4.1.12"
+  }
+}

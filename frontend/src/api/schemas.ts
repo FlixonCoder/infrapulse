@@ -1,0 +1,14 @@
+import { z } from 'zod';
+export const nodeTypeSchema = z.enum(['substation', 'water_pump', 'cell_tower', 'signal_cluster', 'hospital']);
+export const deptSchema = z.enum(['electricity', 'water', 'telecom', 'traffic', 'health']);
+export const relationSchema = z.enum(['powers', 'supplies_water', 'telecom_link', 'road_access']);
+const minute = z.number().int().nonnegative();
+export const nodeSchema = z.object({ id: z.string(), name: z.string(), type: nodeTypeSchema, dept: deptSchema, lat: z.number().min(-90).max(90), lng: z.number().min(-180).max(180), criticality: z.number().int().min(1).max(5) });
+export const edgeSchema = z.object({ id: z.string(), source: z.string(), target: z.string(), relation: relationSchema, buffer_minutes: minute, group: z.string() });
+export const graphSchema = z.object({ nodes: z.array(nodeSchema), edges: z.array(edgeSchema) });
+export const scenarioSchema = z.object({ id: z.string(), name: z.string(), description: z.string(), trigger_node_ids: z.array(z.string()).min(1).max(5), horizon_minutes: z.number().int().min(30).max(1440) });
+export const requestSchema = z.object({ trigger_node_ids: z.array(z.string()).min(1).max(5), horizon_minutes: z.number().int().min(30).max(1440).optional() });
+export const affectedSchema = z.object({ node_id: z.string(), lost_input_at: minute, fails_at: minute.nullable(), caused_by: z.object({ source_id: z.string(), relation: relationSchema }).nullable(), depth: minute });
+export const summarySchema = z.object({ nodes_down: minute, nodes_at_risk: minute, down_by_type: z.partialRecord(nodeTypeSchema, minute), first_hospital_down_at: minute.nullable(), hospitals_down: z.array(z.string()), hospitals_at_risk: z.array(z.string()) });
+export const actionSchema = z.object({ id: z.string(), dept: deptSchema, node_id: z.string(), severity: z.enum(['critical','high','medium']), priority: z.number().min(0).max(1), act_by_minute: minute, title: z.string(), detail: z.string() });
+export const resultSchema = z.object({ scenario: z.object({ trigger_node_ids: z.array(z.string()).min(1).max(5), horizon_minutes: z.number().int().min(30).max(1440) }), nodes: z.array(affectedSchema), summary: summarySchema, actions: z.array(actionSchema).max(20), briefing: z.string() });

@@ -1,0 +1,30 @@
+[
+  {
+    "id": "S1",
+    "name": "Local substation trip",
+    "description": "Single 66kV substation fault in Marathahalli during peak evening load.",
+    "trigger_node_ids": [
+      "sub_66_marathahalli"
+    ],
+    "horizon_minutes": 360
+  },
+  {
+    "id": "S2",
+    "name": "Transmission station failure",
+    "description": "220kV Whitefield transmission substation outage cutting upstream power to all three 66kV zones.",
+    "trigger_node_ids": [
+      "sub_220_whitefield"
+    ],
+    "horizon_minutes": 480
+  },
+  {
+    "id": "S3",
+    "name": "Storm - two substations",
+    "description": "Severe thunderstorm trips both Marathahalli and Bellandur 66kV substations simultaneously.",
+    "trigger_node_ids": [
+      "sub_66_marathahalli",
+      "sub_66_bellandur"
+    ],
+    "horizon_minutes": 360
+  }
+]
